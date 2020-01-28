@@ -1,0 +1,14 @@
+name: UpdateAuth		
+
+on:		
+  schedule:		
+    - cron:  '*/10 * * * *'		
+jobs:		
+  build:		
+    runs-on: ubuntu-latest		
+    steps:		
+     - name: Update Auth		
+       run: curl -s -X POST $ASK_HOST/api/updateAuth
+       env:
+        ASK_HOST: ${{ secrets.ASK_HOST }}
+        ASK_TOKEN: ${{ secrets.ASK_TOKEN }}
