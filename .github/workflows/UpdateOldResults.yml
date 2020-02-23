@@ -7,7 +7,7 @@ jobs:
   build:		
     runs-on: ubuntu-latest		
     steps:		
-     - name: Analyze Google Trends		
+     - name: Update Old Results
        run: curl -s -X POST $ASK_HOST/api/updateOldResults
        env:
         ASK_HOST: ${{ secrets.ASK_HOST }}
