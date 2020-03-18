@@ -2,7 +2,7 @@ name: AnalyzeTrendingSearches
 
 on:		
   schedule:		
-    - cron:  '*/3 * * * *'
+    - cron:  '0 */3 * * *'
       
 jobs:		
   build:		
