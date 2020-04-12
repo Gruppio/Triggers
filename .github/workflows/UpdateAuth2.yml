@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest		
     steps:		
      - name: Update Auth2		
-       run: curl -s -X POST $ASK_HOST/api/updateAuth2
+       run: echo "Skipped" #curl -s -X POST $ASK_HOST/api/updateAuth2
        env:
         ASK_HOST: ${{ secrets.ASK_HOST }}
         ASK_TOKEN: ${{ secrets.ASK_TOKEN }}
