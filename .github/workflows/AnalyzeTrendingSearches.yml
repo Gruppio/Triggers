@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest		
     steps:		
      - name: Analyze Trending Searches		
-       run: curl -s -X POST $ASK_HOST/api/analyzeTrendingSearches
+       run: echo "paused" #curl -s -X POST $ASK_HOST/api/analyzeTrendingSearches
        env:
         ASK_HOST: ${{ secrets.ASK_HOST }}
         ASK_TOKEN: ${{ secrets.ASK_TOKEN }}
