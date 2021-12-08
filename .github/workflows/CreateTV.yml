@@ -1,0 +1,13 @@
+name: CreateTV		
+
+on:		
+  schedule:		
+    - cron:  '*/10 * * * *'		
+jobs:		
+  build:		
+    runs-on: ubuntu-latest		
+    steps:		
+     - name: Update Auth		
+       run: curl -s -X POST $BN_HOST/api/createTV
+       env:
+        BN_HOST: ${{ secrets.BN_HOST }}
