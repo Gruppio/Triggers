@@ -2,12 +2,12 @@ name: CreateTV
 
 on:		
   schedule:		
-    - cron:  '*/15 * * * *'		
+    - cron:  '*/20 * * * *'		
 jobs:		
   build:		
     runs-on: ubuntu-latest		
     steps:		
      - name: Update Auth		
-       run: echo "Disabled" #curl -s -X POST $BN_HOST/api/createTV
+       run: curl -s -X POST $BN_HOST/api/createTV
        env:
         BN_HOST: ${{ secrets.BN_HOST }}
