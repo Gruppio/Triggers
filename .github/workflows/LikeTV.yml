@@ -1,0 +1,13 @@
+name: LikeTV		
+
+on:		
+  schedule:		
+    - cron:  '*/45 * * * *'		
+jobs:		
+  build:		
+    runs-on: ubuntu-latest		
+    steps:		
+     - name: Like BG		
+       run: curl -s -X POST $BN_HOST/api/likeTV/5193167
+       env:
+        BN_HOST: ${{ secrets.BN_HOST }}
