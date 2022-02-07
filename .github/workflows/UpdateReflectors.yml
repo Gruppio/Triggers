@@ -1,0 +1,13 @@
+name: UpdateReflectors
+
+on:		
+  schedule:		
+    - cron:  '*/18 * * * *'		
+jobs:		
+  build:		
+    runs-on: ubuntu-latest		
+    steps:		
+     - name: Update Reflectors		
+       run: curl -s -X POST $REFLECTORS_HOST/api/updateQSOs
+       env:
+        REFLECTORS_HOST: ${{ secrets.REFLECTORS_HOST }}
